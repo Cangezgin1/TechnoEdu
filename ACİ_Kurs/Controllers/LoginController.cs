@@ -20,8 +20,7 @@ namespace ACİ_Kurs.Controllers
         [HttpPost]
         public IActionResult ÖğrenciLogin(Ogrenciler p)
         {
-
-            var values = c.ogrencilers.First(x=>x.KullanıcıAdı==p.KullanıcıAdı && x.Sifre==p.Sifre);
+            var values = c.ogrencilers.FirstOrDefault(x=>x.KullanıcıAdı==p.KullanıcıAdı && x.Sifre==p.Sifre);
 
             if (values != null)
             {
@@ -32,10 +31,23 @@ namespace ACİ_Kurs.Controllers
         }
 
 
-
+        [HttpGet]
         public IActionResult ÖğretmenLogin()
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult ÖğretmenLogin(Ogretmenler p)
+        {
+            var values = c.ogretmenlers.FirstOrDefault(x => x.KullanıcıAdı == p.KullanıcıAdı && x.Sifre == p.Sifre);
+
+            if (values != null)
+            {
+                return RedirectToAction("Index", "Ögrenci");
+            }
+            else
+                return View();
+        }
+
     }
 }
