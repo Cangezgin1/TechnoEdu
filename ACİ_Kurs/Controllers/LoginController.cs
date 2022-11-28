@@ -12,6 +12,7 @@ namespace ACİ_Kurs.Controllers
     {
         Context c = new Context();
 
+
         [HttpGet]
         public IActionResult ÖğrenciLogin()
         {
@@ -31,6 +32,8 @@ namespace ACİ_Kurs.Controllers
         }
 
 
+
+
         [HttpGet]
         public IActionResult ÖğretmenLogin()
         {
@@ -43,7 +46,7 @@ namespace ACİ_Kurs.Controllers
 
             if (values != null)
             {
-                return RedirectToAction("Index", "Ögrenci");
+                return RedirectToAction("Index", "Öğretmen");  // Öğretmen için Panel yapılacak
             }
             else
                 return View();

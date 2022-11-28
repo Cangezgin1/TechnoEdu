@@ -8,9 +8,11 @@ namespace ACİ_Kurs.Controllers
 {
     public class ÖgrenciController : Controller
     {
+
         public IActionResult Index()
         {
             return View();
         }
+
     }
 }

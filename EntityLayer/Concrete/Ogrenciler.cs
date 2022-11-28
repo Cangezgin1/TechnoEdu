@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         [StringLength(25)]
         public string Sınıfı { get; set; }
         [StringLength(25)]
-        public int Numarası { get; set; }
+        public int? Numarası { get; set; }
         public string KullanıcıAdı { get; set; }
         public string Sifre { get; set; }
     }

@@ -20409,16 +20409,19 @@ div.tagsinput {
       color: #6c7293;
       height: 70px;
       border-radius: 0px; }
-      .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
-        font-size: 0.875rem; }
+        .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
+            font-size: 0.875rem;
+        }
         @media (max-width: 991px) {
-          .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
-            display: none; } }
+            .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
+                display: none;
+            } }
       @media (max-width: 991px) {
         .navbar .navbar-menu-wrapper .navbar-toggler.navbar-toggler-right {
-          padding-left: 15px;
-          padding-right: 11px;
-          border-right: none; } }
+            padding-left: 15px;
+            padding-right: 11px;
+            border-right: none;
+        } }
     .navbar .navbar-menu-wrapper .search-field .input-group input, .navbar .navbar-menu-wrapper .search-field .asColorPicker-wrap input {
       font-size: 0.875rem;
       padding: .5rem; }
