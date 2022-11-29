@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace ACİ_Kurs.Controllers
 {
-    public class ÖgrenciController : Controller
+    public class IngilizceController : Controller
     {
-
         public IActionResult Index()
         {
             return View();
         }
-
     }
 }

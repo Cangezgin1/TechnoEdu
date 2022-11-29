@@ -22,5 +22,30 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
+
+        public void TAdd(Ogrenciler t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(Ogrenciler t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Ogrenciler TGetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Ogrenciler> TGetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Ogrenciler t)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

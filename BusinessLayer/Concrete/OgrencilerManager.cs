@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public List<Ogrenciler> TGetList()
         {
-            throw new NotImplementedException();
+            return _ogrencilerDal.GetList();
         }
 
         public void TUpdate(Ogrenciler t)

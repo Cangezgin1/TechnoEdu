@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Öğrenci Girişi</title>
+    <title>Öğretmen Girişi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
@@ -18,20 +18,20 @@
     <link rel="stylesheet" type="text/css" href="~/Login_v1/vendor/select2/select2.min.css">
     <link rel="stylesheet" type="text/css" href="~/Login_v1/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/Login_v1/css/main.css">
-
+    <link rel="shortcut icon" href="~/OkulKurs/web/images/TE.png" />
 </head>
 <body>
 
     <div class="limiter">
         <div class="container-login100">
-            <div class="wrap-login100" style="width:1000px;height:700px;">
+            <div class="wrap-login100" style="width:1000px;height:700px;background:#fff !important">
 
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="~/Login_v1/images/img-01.png" alt="IMG">
                 </div>
 
-                @using (Html.BeginForm("ÖğretmenLogin", "Login", FormMethod.Post))
-                {
+                @using (Html.BeginForm("OgretmenLogin", "Login", FormMethod.Post))
+                 {
                     <span class="login100-form-title" style="color:#FFBD50;">
                         TechoEdu<br>Öğretmen Girişi
                     </span>
@@ -58,7 +58,7 @@
                         </button>
                         <a href="/Home/Index/" style="margin-top:20%;">Ana Sayfaya Dön</a>
                     </div>
-                }
+                 }
             </div>
         </div>
     </div>

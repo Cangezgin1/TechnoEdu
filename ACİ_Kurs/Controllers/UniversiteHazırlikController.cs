@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACİ_Kurs.Controllers
 {
-    public class ÜniversiteHazırlıkController : Controller
+    public class UniversiteHazırlikController : Controller
     {
         public IActionResult Index()
         {

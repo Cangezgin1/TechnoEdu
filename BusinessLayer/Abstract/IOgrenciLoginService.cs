@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IOgrenciLoginService
+    public interface IOgrenciLoginService : IGenericService<Ogrenciler>
     {
         Ogrenciler GetOgrenci(string Kullanıcıadı, string sifre);
     }

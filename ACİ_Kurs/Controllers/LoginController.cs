@@ -14,18 +14,18 @@ namespace ACİ_Kurs.Controllers
 
 
         [HttpGet]
-        public IActionResult ÖğrenciLogin()
+        public IActionResult OgrenciLogin()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult ÖğrenciLogin(Ogrenciler p)
+        public IActionResult OgrenciLogin(Ogrenciler p)
         {
             var values = c.ogrencilers.FirstOrDefault(x=>x.KullanıcıAdı==p.KullanıcıAdı && x.Sifre==p.Sifre);
 
             if (values != null)
             {
-                return RedirectToAction("Index", "Ögrenci");
+                return RedirectToAction("Index", "Ogrenci");
             }
             else
                 return View();
@@ -35,22 +35,21 @@ namespace ACİ_Kurs.Controllers
 
 
         [HttpGet]
-        public IActionResult ÖğretmenLogin()
+        public IActionResult OgretmenLogin()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult ÖğretmenLogin(Ogretmenler p)
+        public IActionResult OgretmenLogin(Ogretmenler p)
         {
             var values = c.ogretmenlers.FirstOrDefault(x => x.KullanıcıAdı == p.KullanıcıAdı && x.Sifre == p.Sifre);
 
             if (values != null)
             {
-                return RedirectToAction("Index", "Öğretmen");  // Öğretmen için Panel yapılacak
+                return RedirectToAction("Index", "Ogretmen");  // Öğretmen için Panel yapılacak
             }
             else
                 return View();
         }
-
     }
 }
