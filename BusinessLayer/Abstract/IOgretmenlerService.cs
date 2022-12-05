@@ -9,5 +9,7 @@ namespace BusinessLayer.Abstract
 {
     public interface IOgretmenlerService:IGenericService<Ogretmenler>
     {
+        Ogretmenler GetByID(int id);
+        void UpdateOgretmen(Ogretmenler ogretmenler);
     }
 }

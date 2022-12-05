@@ -1,0 +1,50 @@
+﻿
+@model EntityLayer.Concrete.Ogretmenler
+
+@{
+    ViewData["Title"] = "OgretmenEkle";
+    Layout = "~/Views/Shared/_OgretmenLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("OgretmenEkle", "Ogretmen", FormMethod.Post))
+     {
+        <div class="form-group" >
+            @Html.Label("Öğretmen AdSoyad")
+            @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.AdSoyad)
+            <br />
+            <br />
+            @Html.Label("Öğretmen Branşı")
+            @Html.TextBoxFor(x => x.Brans, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Brans)
+            <br />
+            <br />
+            @Html.Label("Telefon Numarası")
+            @Html.TextBoxFor(x => x.TelefonNo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.TelefonNo)
+            <br />
+            <br />
+            @Html.Label("Kullanıcı Adı")
+            @Html.TextBoxFor(x => x.KullanıcıAdı, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Sifre)
+            <br />
+            <br />
+            @Html.Label("Şifre")
+            @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Sifre)
+            <br />
+            <br />
+            <button class="btn btn-success">Ekle</button>
+        </div>
+
+     }
+</body>
+</html>
+

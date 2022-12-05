@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Ogretmenler
+
+
+@{
+    ViewData["Title"] = "UpdateOgretmen";
+    Layout = "~/Views/Shared/_OgretmenLayout.cshtml";
+}
+
+<h2>Öğretmen Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("UpdateOgretmen", "Ogretmen", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.AdSoyad)
+    @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Brans)
+    @Html.TextBoxFor(x => x.Brans, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TelefonNo)
+    @Html.TextBoxFor(x => x.TelefonNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KullanıcıAdı)
+    @Html.TextBoxFor(x => x.KullanıcıAdı, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Sifre)
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">GÜNCELLE</button>
+}
+

@@ -11,7 +11,7 @@
 
 <br />
 <br />
-<table class="table table-bordered">
+<table class="table table-bordered table-responsive-lg">
     <tr>
         <th>#</th>
         <th>Öğrenci Ad Soyad</th>
@@ -22,7 +22,7 @@
     </tr>
 
     @foreach (var item in Model)
-    {
+     {
         <tr>
             <th>@item.OgrenciID</th>
             <td>@item.AdSoyad</td>
@@ -31,6 +31,6 @@
             <th><a href="#" class="btn btn-success">Tanınmış Denemeler</a></th>
             <th><a href="#" class="btn btn-warning">Tamamlanan Denemeler</a></th>
         </tr>
-    }
+     }
 </table>
 

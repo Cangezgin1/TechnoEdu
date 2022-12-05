@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Ogretmenler>
+
+@{
+    ViewData["Title"] = "OgretmenListesi";
+    Layout = "~/Views/Shared/_OgretmenLayout.cshtml";
+}
+
+<h1 style="text-align:center;margin-top:10%">Öğretmen Listesi</h1>
+
+<br />
+<br />
+<table class="table table-bordered table-responsive-lg">
+    <tr>
+        <th>#</th>
+        <th>Öğretmen Ad Soyad</th>
+        <th>Öğretmen Branşı</th>
+        <th>Telefon Numarası</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.OgretmenID</th>
+            <td>@item.AdSoyad</td>
+            <td>@item.Brans</td>
+            <td>@item.TelefonNo</td>
+            <td><a href="/Ogretmen/UpdateOgretmen/@item.OgretmenID" class="btn btn-info">GÜNCELLE</a></td>
+            <td><a href="/Ogretmen/DeleteOgretmen/@item.OgretmenID" class="btn btn-danger">SİL</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Ogretmen/OgretmenEkle/" class="btn btn-success">Öğretmen Ekle</a>

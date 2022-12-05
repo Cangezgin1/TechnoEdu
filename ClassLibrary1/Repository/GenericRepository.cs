@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace DataAccessLayer.Repository
 {
@@ -21,6 +22,11 @@ namespace DataAccessLayer.Repository
             c.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
+        }
+
         public List<T> GetList()
         {
             using var c = new Context();
@@ -31,6 +37,7 @@ namespace DataAccessLayer.Repository
         {
             using var c = new Context();
             c.Add(t);
+            c.SaveChanges();
         }
 
         public List<T> List()

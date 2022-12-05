@@ -46,7 +46,7 @@ namespace ACİ_Kurs.Controllers
 
             if (values != null)
             {
-                return RedirectToAction("Index", "Ogretmen");  // Öğretmen için Panel yapılacak
+                return RedirectToAction("OgretmenListesi", "Ogretmen");  // Öğretmen için Panel yapılacak
             }
             else
                 return View();
