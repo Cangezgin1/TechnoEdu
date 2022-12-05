@@ -11,6 +11,9 @@
 
 @using (Html.BeginForm("UpdateOgretmen", "Ogretmen", FormMethod.Post))
 {
+    @Html.LabelFor(x => x.OgretmenID)
+    @Html.TextBoxFor(x => x.OgretmenID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
     @Html.LabelFor(x => x.AdSoyad)
     @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
     <br />

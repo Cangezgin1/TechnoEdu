@@ -48,7 +48,9 @@ namespace DataAccessLayer.Repository
         public void Update(T t)
         {
             using var c = new Context();
-            c.Update(t);
+            var update = c.Entry(t);
+            update.State = EntityState.Modified;
+            c.SaveChanges();
         }
     }
 }

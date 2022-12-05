@@ -21,6 +21,7 @@ namespace ACİ_Kurs.Controllers
         OgretmenlerValidator ogretmenvalidator = new OgretmenlerValidator();
 
 
+
         public IActionResult OgrenciListesi()        // Öğrenci Listesi
         {
             var values = c.ogrencilers.ToList();
@@ -29,6 +30,7 @@ namespace ACİ_Kurs.Controllers
 
 
 
+        
 
         public IActionResult OgretmenListesi()   // Öğretmen Listesi
         {
@@ -69,7 +71,7 @@ namespace ACİ_Kurs.Controllers
 
 
 
-        public IActionResult DeleteOgretmen(int id)
+        public IActionResult DeleteOgretmen(int id)  // Ogretmen Silme
         {
             var values = c.ogretmenlers.Find(id);
             om.DeleteOgretmen(values);
@@ -82,7 +84,7 @@ namespace ACİ_Kurs.Controllers
 
 
         [HttpGet]
-        public IActionResult UpdateOgretmen(int id)
+        public IActionResult UpdateOgretmen(int id)    // Ogretmen Güncelleme
         {
             var values = c.ogretmenlers.Find(id);
             return View(values);
@@ -91,10 +93,8 @@ namespace ACİ_Kurs.Controllers
         public IActionResult UpdateOgretmen(Ogretmenler ogretmenler)
         {
             om.UpdateOgretmen(ogretmenler);
-            c.SaveChanges();
             return RedirectToAction("OgretmenListesi","Ogretmen");
         }
-
 
     }
 }
