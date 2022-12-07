@@ -8,29 +8,26 @@
 }
 
 <h1 style="text-align:center;margin-top:10%">Öğrenci Listesi</h1>
-
 <br />
-<br />
-<table class="table table-bordered table-responsive-lg">
+<table style="color:white !important;text-align:center !important" class="table table-striped table-bordered table-responsive-lg">
     <tr>
         <th>#</th>
         <th>Öğrenci Ad Soyad</th>
         <th>Öğrenci Numarası</th>
         <th>Sınıfı</th>
-        <th>Tanınmış Denemeler</th>
-        <th>Tamamlanan Denemeler</th>
+        <th>Analizler</th>
     </tr>
 
     @foreach (var item in Model)
-     {
+    {
         <tr>
             <th>@item.OgrenciID</th>
             <td>@item.AdSoyad</td>
             <td>@item.Numarası</td>
             <td>@item.Sınıfı</td>
-            <th><a href="#" class="btn btn-success">Tanınmış Denemeler</a></th>
-            <th><a href="#" class="btn btn-warning">Tamamlanan Denemeler</a></th>
+            <th><a href="#" class="btn btn-success">Analizler</a></th>
         </tr>
-     }
+    }
 </table>
+
 
