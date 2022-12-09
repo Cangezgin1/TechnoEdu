@@ -1,3 +1,7 @@
 <h1> TechnoEdu </h1>
 
-<h3>Öğrencilerin internet ortamından deneme(AYT,TYT) olabileceği ,</br>sınav sonunda analizlerin çıkarıldığı ve öğretmenlerin takip yapabildiği bir web sitesi.</h3>
+<h3>
+Öğrencilerin deneme sınavına girdikten sonra</br> 
+analizlerin çıkarıldığı ve öğretmenlerin takip yapabildiği bir web sitesi.
+.Net Core 5.0, Katmanlı mimari, EntityFrameworkCore, MsSql kullanılmıştır. 
+</h3>
